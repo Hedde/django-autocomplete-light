@@ -139,6 +139,7 @@ INSTALLED_APPS = (
     'autocomplete_light.example_apps.dependant_autocomplete',
     'autocomplete_light.example_apps.non_admin_add_another',
     'autocomplete_light.example_apps.create_choice_on_the_fly',
+    'autocomplete_light.example_apps.admin_readonly_issue',
 
     'navigation_autocomplete',
     'admin_autocomplete_in_row',
