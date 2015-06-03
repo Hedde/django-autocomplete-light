@@ -15,7 +15,9 @@ admin.site.register(ModelX, ModelXAdmin)
 
 
 class ModelYAdminForm(forms.ModelForm):
-    x = autocomplete_light.ModelChoiceField('ModelXAutocomplete', label="ModelX")
+    # adding required = False to this line will fix the issue for readonly fields,
+    # but saving an empty form will result in an IntegrityError
+    x = autocomplete_light.ModelChoiceField('ModelXAutocomplete', label="ModelX",)
 
     class Meta:
         exclude = tuple()
