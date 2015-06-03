@@ -25,6 +25,7 @@ class ModelYAdminForm(forms.ModelForm):
 class ModelYAdmin(admin.ModelAdmin):
     form = ModelYAdminForm
 
+    # commenting out this method will resolve the issue
     def get_readonly_fields(self, request, obj=None):
         if obj:
             return 'x'
