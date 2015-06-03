@@ -17,6 +17,10 @@ admin.site.register(ModelX, ModelXAdmin)
 class ModelYAdminForm(forms.ModelForm):
     x = autocomplete_light.ModelChoiceField('ModelXAutocomplete', label="ModelX")
 
+    class Meta:
+        exclude = tuple()
+        model = ModelY
+
 
 class ModelYAdmin(admin.ModelAdmin):
     form = ModelYAdminForm
